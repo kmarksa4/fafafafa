@@ -6,10 +6,12 @@ body {
 }
 
 header {
+    position: fixed;
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
-    background: #333;
+    background: #000000;
     color: #fff;
     padding: 10px 20px;
     height: 50px;
@@ -22,7 +24,7 @@ header {
 }
 
 .logo {
-    max-width: 100px; /* Размер логотипа */
+    max-width: 200px; /* Размер логотипа */
 }
 
 nav ul {
@@ -48,14 +50,13 @@ nav ul li {
     position: fixed;
     left: -350px;
     top: calc();
-    top:70px;
+    /* top:70px; */
     width: 350px;
     height: 100%;
     background: #444;
     color: #fff;
     transition: left 0.3s;
     font-size: 20px;
-    
 }
 
 .sidebar.active {
@@ -184,4 +185,7 @@ footer {
     position: absolute;
     right: 10px;
     top: 10px;
+}
+.profile{
+    margin-right: 30px;
 }
