@@ -1,20 +1,20 @@
 // Пример данных о товарах
 const productsList = [{
         imgSrc: "socks.jpg",
-        title: "Товар 1",
-        description: "Описание товара 1.",
+        title: "Носки от ашота",
+        description: "Теплые, но с вентеляцией.",
         price: "500 ₽"
     },
     {
         imgSrc: "podstavka.jpg",
-        title: "Товар 2",
-        description: "Описание товара 2.",
+        title: "Подставка омега класс",
+        description: "Поставить телефон пока кушаешь.",
         price: "750 ₽"
     },
     {
         imgSrc: "termokruzhka.jpg",
-        title: "Товар 3",
-        description: "Описание товара 3.",
+        title: "Термоусадка",
+        description: "Чтобы сердечку было тепло.",
         price: "1000 ₽"
     }
 ];
@@ -22,13 +22,13 @@ const productsList = [{
 // Пример данных о новостях
 const newsList = [{
         imgSrc: "news1.jpg",
-        title: "Новость 1",
-        description: "Текст новости 1."
+        title: "Интенсив",
+        description: "НЕЙМАРК.ИНТЕНСИВ в самом разгаре."
     },
     {
         imgSrc: "news2.jpg",
-        title: "Новость 2",
-        description: "Текст новости 2."
+        title: "Отбор",
+        description: "Начался отбор на новую ИТ-Академию по BIM-моделированию."
     }
 ];
 
@@ -70,4 +70,50 @@ const newsContainer = document.getElementById("news-container");
 newsList.forEach(news => {
     const newsItem = createNewsItem(news);
     newsContainer.appendChild(newsItem);
+});
+// Пример данных о тестах
+const testikiList = [{
+    title: "Тест по программированию",
+    description: "Проверьте свои знания в программировании.",
+    link: "#programming-test" // Ссылка на тест (замените на реальную)
+}];
+
+// Функция для создания карточки теста
+function createTestCard(test) {
+    const card = document.createElement("div");
+    card.classList.add("testiki-card");
+    card.innerHTML = `
+        <h3>${test.title}</h3>
+        <p>${test.description}</p>
+        <button onclick="window.location.href='${test.link}'">Пройти тест</button>
+    `;
+    return card;
+}
+
+// Отрисовка тестов на странице
+const testikiContainer = document.getElementById("testiki-container");
+testikiList.forEach(test => {
+    const testCard = createTestCard(test);
+    testikiContainer.appendChild(testCard);
+});
+
+// Пример данных о Telegram-канале
+const tgMessages = [
+    "Подписывайтесь на наш телеграм-канал для получения актуальных новостей.",
+    "Получайте уведомления о новых тестах и акциях прямо в своем мессенджере."
+];
+
+// Функция для добавления сообщений о Telegram
+function addTgMessage(message) {
+    const messageDiv = document.createElement("div");
+    messageDiv.classList.add("tg-message");
+    messageDiv.innerText = message;
+    return messageDiv;
+}
+
+// Отрисовка сообщений о Telegram на странице
+const tgContainer = document.getElementById("tg-container");
+tgMessages.forEach(message => {
+    const tgMessage = addTgMessage(message);
+    tgContainer.appendChild(tgMessage);
 });

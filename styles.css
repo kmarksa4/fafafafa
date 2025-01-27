@@ -12,6 +12,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    width: 100%;
 }
 
 .logo {
@@ -71,6 +73,7 @@ main {
     margin: 10px;
     padding: 15px;
     min-width: 200px;
+    font-size: 200%;
     /* Минимальная ширина карточки */
     flex: 1 1 30%;
     /* Чтобы карточки занимали 30% ширины контейнера */
@@ -86,11 +89,116 @@ main {
 
 .product-card button {
     background-color: #007bff;
+    font-size: 80%;
     color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
     border-radius: 5px;
+}
+
+.tg-section,
+.testiki-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 50px;
+    color: white;
+    margin-bottom: 15px;
+    text-align: center;
+    /* Центрирование заголовка */
+}
+
+.tgtextiki {
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+    text-align: center;
+    /* Центрирование заголовка */
+}
+
+.product-cards {
+    display: flex;
+    justify-content: center;
+    /* Центрируем содержимое */
+    align-items: center;
+    /* Центрируем по вертикали */
+}
+
+.testi {
+    font-size: 50px;
+    text-align: center;
+    background-image: url('bg_news.png');
+    color: rgb(255, 255, 255);
+}
+
+.testiki-card {
+    background: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-width: 250px;
+    /* Минимальная ширина карточки */
+    max-width: 400px;
+    /* Максимальная ширина карточки */
+    flex: 0 1 auto;
+    /* Не растягиваем карточку, а даем ей максимальную ширину */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    /* Центрируем текст внутри карточки */
+}
+
+.bobrkurwa {
+    border-radius: 100px;
+    scale: 65%;
+}
+
+.testiki-card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.testiki-card button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/* Адаптивный дизайн */
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 20px;
+        /* Уменьшаем размер заголовка */
+    }
+    h1 {
+        font-size: 20px;
+        /* Уменьшаем размер заголовка */
+    }
+}
+
+@media (max-width: 480px) {
+    .testiki-card {
+        flex: 1 1 100%;
+        /* На самых маленьких экранах карточки занимают 100% */
+    }
+}
+
+.tgbot,
+.product-cards {
+    display: flex;
+    flex-wrap: wrap;
+    /* Позволяет элементам переноситься на следующую строку */
+    justify-content: space-around;
+    /* Выравнивание элементов */
 }
 
 footer {
@@ -100,7 +208,7 @@ footer {
     color: white;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 500px) {
     header,
     footer {
         padding: 10px 0;
