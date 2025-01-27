@@ -1,7 +1,7 @@
 // Пример данных о товарах
 const productsList = [{
         imgSrc: "socks.jpg",
-        title: "Носки от ашота",
+        title: "Носки Неймарк",
         description: "Теплые, но с вентеляцией.",
         price: "500 ₽"
     },
@@ -13,8 +13,8 @@ const productsList = [{
     },
     {
         imgSrc: "termokruzhka.jpg",
-        title: "Термоусадка",
-        description: "Чтобы сердечку было тепло.",
+        title: "Термостакан",
+        description: "Чтобы тело было тепло.",
         price: "1000 ₽"
     }
 ];
